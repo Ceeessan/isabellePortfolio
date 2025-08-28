@@ -1,0 +1,113 @@
+header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+
+    #name{
+        font-size: 58px;
+        color: #FFCAC6;
+        margin-bottom: 0;
+        font-weight: normal;
+    }
+
+    #profession{
+        margin-top:0;
+        font-size: 20px;
+        color: #FFCAC6;
+    }
+
+    .nav-list{
+        min-width: 60%;
+        margin-top:2rem;
+
+        ul{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li{
+            list-style: none;
+            cursor: pointer;
+            
+
+            a{
+                color: #5A5A5A;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &.active, &.clicked{
+                    color: #FFCAC6;
+                }
+            }
+            }
+        }
+    }
+}
+
+#burgerMenu{
+    display:none;
+    cursor:pointer;
+}
+
+@media (max-width: 760px) {
+    header{
+        #name{
+            font-size: 38px;
+        }
+
+        #burgerMenu{
+            position: fixed;
+            display:block;
+            top: 2rem;
+            right: 0;
+            z-index: 1000;
+            color: #FFCAC6;
+            background-color: #FFFBFB;
+            padding:0.5rem;
+            font-family: Arial, sans-serif;
+            font-weight:100;
+            font-size: 38px;
+
+            .icon {
+                display:none;
+            }
+
+            .icon.visible{
+                display: inline-block
+            }
+        }
+
+        .nav-list{
+            position: fixed;
+            top:-35px;
+            right: 0;
+            padding: 2rem;
+            text-align: left;
+            min-width: unset;
+            width: 12rem;
+            background-color: #FFFBFB;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index:999;
+            display:flex;
+
+            &.open{
+                z-index: 999; 
+                right:0;
+                transform: translateX(0);
+            }
+
+            ul{
+                display:flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                li{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<header>
+    <div id="burgerMenu" (click)="toggleMenu()">
+    <span 
+    class="icon open"
+    [class.visible]="!menuOpen"
+    >☰</span>
+    <span
+    class="icon close"
+    [class.visible]="menuOpen"
+    >X</span>
+</div>
+
+<div>
+    <h1 id="name">Isabelle Hultqvist</h1>
+    <p id="profession"> Dancer & Danceteacher </p>
+</div>
+
+<nav class="nav-list" [class.open]="menuOpen">
+    <ul>
+        <li><a 
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="closeMenu()"
+            >Home</a></li>
+        <li><a
+            routerLink="/about"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            >About</a></li>
+        <li><a
+            routerLink="/gallery"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            >Gallery</a></li>
+        <li><a
+            href="/src/assets/Isabelle-CV.jpg"
+            download="Isabelle-CV.jpg"
+            [class.clicked]="clicked"
+            (click)="onResumeClick()"
+            >Resume</a></li>
+    </ul>
+</nav>
+</header>
+

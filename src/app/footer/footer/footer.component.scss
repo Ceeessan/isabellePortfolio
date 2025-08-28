@@ -1,0 +1,50 @@
+footer {
+    background-image: url('/assets/footer.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 28rem;
+    margin:0;
+    position: relative;
+
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 80%; 
+
+        .get-in-touch{
+
+        a{
+        display:flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        color: #5A5A5A;
+        text-decoration: none;
+        max-width: 5rem;
+
+        img{
+            height: 1.8rem;
+            padding: 1rem;
+
+        }
+
+        p{
+            letter-spacing: 0.5px;
+            font-size: 18px;
+        }
+        }
+    }
+    }
+
+    #created{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display:flex;
+        justify-content: center;
+        color: #5A5A5A;
+        padding: 1rem 0;
+    }
+}
